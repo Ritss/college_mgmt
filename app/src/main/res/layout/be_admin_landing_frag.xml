@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/foo_toolbar"   />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ScrollView
+            android:id="@+id/srlvwMainContainer"
+            android:layout_width="250dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/admin_sidebar_bg"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaDashboard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwDashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/dash_home_selected" />
+
+                        <TextView
+                            android:id="@+id/txtDashboard"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="DASHBOARD"
+                            android:textColor="@color/dash_selected"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaDashboardIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaSubject"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwSubject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_subj1" />
+
+                        <TextView
+                            android:id="@+id/txtSubject"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="SUBJECT"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaSubjectIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaClass"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwClass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_class" />
+
+                        <TextView
+                            android:id="@+id/txtClass"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="CLASS"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaClassIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaDiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwDiv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_div" />
+
+                        <TextView
+                            android:id="@+id/txtDiv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="DIVISION"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaDivIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaReports"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwReports"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_reports" />
+
+                        <TextView
+                            android:id="@+id/txtReports"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="REPORT"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaReportsIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaStaff"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwStaff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_staff1" />
+
+                        <TextView
+                            android:id="@+id/txtStaff"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="STAFF"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaStaffIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaStudent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwStudent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_stud1" />
+
+                        <TextView
+                            android:id="@+id/txtStudent"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="STUDENT"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaStudentIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ff000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rellaTaxes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/admin_sidebar_bg"
+                        android:padding="5dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp" >
+
+                        <ImageView
+                            android:id="@+id/imgvwTaxes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/dash_taxes" />
+
+                        <TextView
+                            android:id="@+id/txtTaxes"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:text="TAXES"
+                            android:textColor="@color/dash_normal"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linlaTaxesIndicator"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right|center"
+                        android:background="#ff7400"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

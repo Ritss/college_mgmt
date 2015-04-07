@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+
+        <include layout="@layout/foo_toolbar"/>
+
+
+        <TextView
+            android:id="@+id/tvStaff"
+            android:layout_width="312dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="          STAFF DETAILS"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tvStaffID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2pt"
+            android:text="Staff ID :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <AutoCompleteTextView
+        android:id="@+id/acStaffId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="3" />
+
+        <TextView
+            android:id="@+id/tvStname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2pt"
+            android:text="Name :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtStName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvMNO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2pt"
+            android:text="Mobile No :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtMNO"
+             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvStUid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2pt"
+            android:text="User ID :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtStUid"
+             android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:inputType="text"/>
+        <TextView
+            android:id="@+id/tvStPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2pt"
+            android:text="Password :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edtStPwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:inputType="textPassword" />
+        <requestFocus />
+
+    </LinearLayout>
+
+</ScrollView>
