@@ -178,6 +178,7 @@ edtTime= (EditText) findViewById(R.id.edtTime);
                 Intent showAtt=new Intent(AttendanceMst.this, AttendanceTransaction.class);
                 showAtt.putExtra("ClassID",ClsID);
                 showAtt.putExtra("DivID",DivID);
+                Log.e("Att","TEst");
                 startActivity(showAtt);
             }
         });

@@ -10,6 +10,7 @@ import com.example.college_mgmt.JSONParser;
 import com.example.college_mgmt.R;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -40,12 +41,12 @@ public class AttendanceTransaction extends Activity {
                     listStudent.setItemsCanFocus(false);
                     listStudent.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
                     adapter = new StudentAdapter(AttendanceTransaction.this, arrStudent);
-					new getStudent().execute();
+
 
                     Bundle bundle=getIntent().getExtras();
                    ClsId= bundle.getString("ClassID");
 					DivId=bundle.getString("DivID");
-
+                    new getStudent().execute();
 				}
 
 				private class getStudent extends AsyncTask<Void, Void, Void> {
@@ -55,10 +56,11 @@ public class AttendanceTransaction extends Activity {
 
 						// Building Parameters
 						List<NameValuePair> params = new ArrayList<NameValuePair>();
-
-						// getting JSON string from URL
+                        params.add(new BasicNameValuePair("class_id", ClsId));
+                        params.add(new BasicNameValuePair("division_id", DivId));
+                        // getting JSON string from URL
 						JSONObject json = jParser.makeHttpRequest(URL_STUDENT, "GET", params);
-						// Log.e("MAIN OBJECT: ", json.toString());
+						Log.e("MAIN LOG: ", json.toString());
 
 						try {
 							// Checking for SUCCESS TAG
@@ -111,6 +113,13 @@ public class AttendanceTransaction extends Activity {
 											studentMst.setClassID(strClassId);
 											Log.e("Class ID :", strClassId);
 										}
+                                        if (JOStudent.has("DivisionID")) {
+
+                                            String strDivisionId = JOStudent
+                                                    .getString("DivisionID");
+                                            studentMst.setClassID(strDivisionId);
+                                            Log.e("Division ID :", strDivisionId);
+                                        }
 										
                                         arrStudent.add(studentMst);
 
@@ -119,7 +128,7 @@ public class AttendanceTransaction extends Activity {
 								}
 							}
 						} catch (Exception e) {
-							e.printStackTrace();
+							e.getMessage();
 						}
 
 						return null;

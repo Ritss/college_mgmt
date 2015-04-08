@@ -1,17 +1,18 @@
 package com.example.college_mgmt.attend_trans;
 
 public class StudentData {
-    private String studentID;
+    private String StudentID;
     private String ClassID;
-	private String studentName;
+	private String StudentName;
 	private String PRN;
+    private String DivisionID;
 
     public String getStudentID() {
-        return studentID;
+        return StudentID;
     }
 
     public void setStudentID(String studentID) {
-        this.studentID = studentID;
+        StudentID = studentID;
     }
 
     public String getClassID() {
@@ -23,11 +24,11 @@ public class StudentData {
     }
 
     public String getStudentName() {
-        return studentName;
+        return StudentName;
     }
 
     public void setStudentName(String studentName) {
-        this.studentName = studentName;
+        StudentName = studentName;
     }
 
     public String getPRN() {
@@ -36,5 +37,13 @@ public class StudentData {
 
     public void setPRN(String PRN) {
         this.PRN = PRN;
+    }
+
+    public String getDivisionID() {
+        return DivisionID;
+    }
+
+    public void setDivisionID(String divisionID) {
+        DivisionID = divisionID;
     }
 }
